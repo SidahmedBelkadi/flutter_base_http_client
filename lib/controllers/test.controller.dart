@@ -10,8 +10,8 @@ class TestController extends GetxController with ErrorHandler {
   Future<void> getData() async {
     try {
       isLoading(true);
-      var response =
-          await HttpClient.get(uri: AppLink.getTodo).catchError(handleError);
+      var response = await HttpClient.get(endpoint: AppLink.getTodo)
+          .catchError(handleError);
 
       if (response == null) return;
     } catch (e) {
@@ -27,8 +27,9 @@ class TestController extends GetxController with ErrorHandler {
 
       isLoading(true);
 
-      var response = await HttpClient.post(uri: AppLink.post, payload: payload)
-          .catchError(handleError);
+      var response =
+          await HttpClient.post(endpoint: AppLink.post, payload: payload)
+              .catchError(handleError);
 
       if (response == null) return;
 
