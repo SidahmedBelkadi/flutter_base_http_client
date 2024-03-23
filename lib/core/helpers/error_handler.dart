@@ -11,6 +11,14 @@ mixin ErrorHandler {
       AppSnackbar.errorSnackBar(message: "Oops!, it took longer to respond.");
     } else if (error is UnAuthorizedException) {
       AppSnackbar.errorSnackBar(message: error.message);
+    } else if (error is ForbiddenException) {
+      AppSnackbar.errorSnackBar(message: error.message);
+    } else if (error is NotFoundException) {
+      AppSnackbar.errorSnackBar(message: error.message);
+    } else if (error is InternalServerErrorException) {
+      AppSnackbar.errorSnackBar(message: error.message);
+    } else if (error is NoInternetConnectionException) {
+      AppSnackbar.errorSnackBar(message: error.message);
     }
   }
 }
