@@ -14,8 +14,9 @@ class TestController extends GetxController with ErrorHandler {
           .catchError(handleError);
 
       if (response == null) return;
+      print(response);
     } catch (e) {
-      AppSnackbar.errorSnackBar(message: e.toString());
+      AppSnackbar.errorSnackBar(message: "Error has occured");
     } finally {
       isLoading(false);
     }
@@ -35,7 +36,7 @@ class TestController extends GetxController with ErrorHandler {
 
       print(response);
     } catch (e) {
-      AppSnackbar.errorSnackBar(message: e.toString());
+      AppSnackbar.errorSnackBar(message: "Error has occured");
     } finally {
       isLoading(false);
     }

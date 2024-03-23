@@ -44,8 +44,6 @@ class HttpClient {
       throw FetchDataException(message: "Connection Failed.");
     } on TimeoutException {
       throw ApiNotRespondingException(message: "Server not responded in time.");
-    } catch (e) {
-      rethrow;
     }
   }
 
@@ -65,8 +63,6 @@ class HttpClient {
       throw FetchDataException(message: "Connection Failed.");
     } on TimeoutException {
       throw ApiNotRespondingException(message: "Server not responded in time.");
-    } catch (e) {
-      rethrow;
     }
   }
 
@@ -88,8 +84,6 @@ class HttpClient {
       throw FetchDataException(message: "Connection Failed.");
     } on TimeoutException {
       throw ApiNotRespondingException(message: "Server not responded in time.");
-    } catch (e) {
-      rethrow;
     }
   }
 
@@ -108,8 +102,6 @@ class HttpClient {
       throw FetchDataException(message: "Connection Failed.");
     } on TimeoutException {
       throw ApiNotRespondingException(message: "Server not responded in time.");
-    } catch (e) {
-      rethrow;
     }
   }
 
@@ -128,8 +120,6 @@ class HttpClient {
       throw FetchDataException(message: "Connection Failed.");
     } on TimeoutException {
       throw ApiNotRespondingException(message: "Server not responded in time.");
-    } catch (e) {
-      rethrow;
     }
   }
 }
